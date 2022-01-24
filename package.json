@@ -4,20 +4,21 @@
   "private": true,
   "description": "Личный проект «Мишка»",
   "devDependencies": {
-    "autoprefixer": "9.5.x",
-    "browser-sync": "2.26.x",
+    "@htmlacademy/editorconfig-cli": "1.x",
+    "autoprefixer": "^9.5.x",
+    "browser-sync": "^2.27.7",
     "gulp": "4.0.x",
     "gulp-plumber": "1.2.x",
-    "gulp-sourcemaps": "2.6.x",
-    "gulp-postcss": "8.0.x",
-    "gulp-sass": "4.0.x",
-    "@htmlacademy/editorconfig-cli": "1.x",
-    "stylelint": "10.1.x",
-    "stylelint-config-htmlacademy": "0.1.x"
+    "gulp-postcss": "9.0.x",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "3.0.x",
+    "sass": "^1.49.0",
+    "stylelint": "^10.1.x",
+    "stylelint-config-htmlacademy": "^0.1.x"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "stylelint": "stylelint \"source/sass//*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp css",
     "start": "gulp start"
@@ -31,9 +32,9 @@
     "*.json",
     "*.js",
     "source/*.html",
-    "source/js/**/*.js",
-    "source/img/**/*.svg",
-    "source/sass/**/*.{sass,scss}"
+    "source/js//*.js",
+    "source/img//*.svg",
+    "source/sass//*.{sass,scss}"
   ],
   "engines": {
     "node": "16.8.0"
