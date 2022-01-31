@@ -1,0 +1,60 @@
+.reviews {
+  margin-bottom: 38px;
+}
+
+.reviews__wrapper {
+  padding: 0 30px 40px 30px;
+}
+
+.reviews::after {
+  content: " ";
+  background-image: url(../../img/zigzag-line-desktop-my.svg);
+  width: 100%;
+  display: block;
+  background-repeat: no-repeat;
+  height: 6px;
+}
+
+.reviews__title {
+  margin-bottom: 27px;
+}
+
+.reviews__text {
+  text-align: left;
+  margin-bottom: 33px;
+}
+
+.reviews__author-name {
+  font-weight: 700;
+  color: $main-color-text;
+  font-size: 17px;
+}
+
+.reviews__author-mail {
+  color: $second-color-text;
+}
+
+.reviews__list {
+  margin-bottom: 35px;
+}
+
+.reviews__toggles {
+  height: 50px;
+  border: 2px solid $color-border;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 40px;
+  margin-bottom: 38px;
+}
+
+.reviews__btn {
+  padding: 14px 81px;
+}
+
+.slider__toggle:hover svg {
+  fill: $color-toggle-hover;
+}
+
+.slider__toggle:active svg {
+  fill: $color-toggle-active;
+}

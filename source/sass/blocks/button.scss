@@ -1,0 +1,24 @@
+.button {
+  color: $second-color-text;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid $color-button-background;
+  display: inline-block;
+}
+
+.button:hover,
+.button:active {
+  background-color: $color-button-background;
+  border: 2px solid $color-button-background;
+}
+
+.button:hover {
+  color: $color-button-text-hover;
+}
+
+.button:active {
+  color: $color-button-text-active;
+}
