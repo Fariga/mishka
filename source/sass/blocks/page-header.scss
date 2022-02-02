@@ -8,13 +8,7 @@
   padding: 22px 30px 22px 117px;
 }
 
-.page-header__btn-menu {
-  margin-left: 37px;
-  padding: 0;
-  border: 0;
-  background-color: transparent;
-}
-
 .page-header {
-  border-bottom: 2px solid $color-border;
+  border-bottom: 2px solid $color-white;
+  position: relative;
 }

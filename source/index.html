@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Mishka</title>
-  <link rel="sttlesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -26,15 +25,17 @@
           </svg>
         </span>
       </a>
-      <button class="page-header__btn-menu" type="button">
-        <div class="page-header__icon-menu">
+    </div>
+    <nav class="main-nav main-nav--open">
+      <button class="main-nav__btn-menu" type="button">
+        <div class="main-nav__icon-menu">
           <img src="img/icon-menu-open.svg" alt="кнопка открыть" width="20" height="14">
         </div>
       </button>
-    </div>
-    <nav class="main-nav">
-      <button class="main-nav__btn visually-hidden" type="button">
-        Закрыть
+      <button class="main-nav__btn-close" type="button">
+        <div class="main-nav__icon-close">
+          <img src="img/icon-menu-close.svg" alt="кнопка закрыть" width="21" height="20">
+        </div>
       </button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
@@ -113,7 +114,9 @@
           <img src="img/triple-set-mobile@1x.jpg" alt="Фото товара" width="260" height="315">
         </div>
         <p class="proposition__price">Цена: 990 руб.</p>
-        <a class="button proposition__btn" href="form.html">Заказать</a>
+        <div class="proposition__btn-wrapper">
+          <a class="button proposition__btn" href="form.html">Заказать</a>
+        </div>
       </div>
     </section>
     <section class="advantages">
@@ -173,18 +176,20 @@
               </blockquote>
             </div>
             <div class="reviews__toggles">
-              <button class="slider__toggle" type="button">
+              <button class="reviews__slider-toggle reviews__slider-toggle--left" type="button">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50px" height="26.003px" viewBox="0 0 50 26.003" enable-background="new 0 0 50 26.003" xml:space="preserve">
                     <polygon points="50,11.002 7.659,11.002 15.833,2.828 13.005,0 0,12.998 0.003,13.001 0,13.005 13.005,26.003 15.833,23.175 7.661,15.002 50,15.002 "/>
                   </svg>
               </button>
-              <button class="slider__toggle" type="button">
+              <button class="reviews__slider-toggle reviews__slider-toggle--right" type="button">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="26.003px" viewBox="0 0 50 26.003" enable-background="new 0 0 50 26.003" xml:space="preserve">
                     <polygon points="0,11.002 42.341,11.002 34.166,2.828 36.995,0 50,12.998 49.996,13.001 50,13.005 36.995,26.003 34.166,23.175 42.339,15.002 0,15.002 "/>
                   </svg>
               </button>
             </div>
-            <a class="button reviews__btn" href="#">Написать</a>
+            <div class="reviews__btn-wrapper">
+              <a class="button reviews__btn" href="#">Написать</a>
+            </div>
           </div>
       </div>
     </section>

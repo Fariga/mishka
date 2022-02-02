@@ -16,11 +16,12 @@
 
 .modal__content {
   max-width: 320px;
-  padding: 36px 30px 46px 30px;
+  padding: 17px;
   background-color: $color-main;
   margin: auto;
-  border-top: 1px solid $color-modal-top-border;
+  border-top: 1px solid $color-grey-1;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  width: 100%;
 }
 
 .modal__title {
@@ -51,8 +52,8 @@
   line-height: 16px;
   text-align: center;
   text-transform: uppercase;
-  color: $color-modal-btn-text;
-  background-color: $color-modal-background-btn;
+  color: $color-main;
+  background-color: $second-color-main;
   margin-top: 31px;
   cursor: pointer;
 }
@@ -60,7 +61,7 @@
 .control-mark {
   width: 78px;
   height: 48px;
-  border: 2px solid $color-modal-input;
+  border: 2px solid $color-white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,9 +72,9 @@
 }
 
 .control-mark:hover {
-  border: 2px solid $color-modal-input-hover;
+  border: 2px solid $color-grey-1;
 }
 
 .modal__size input:checked + .control-mark {
-  border: 2px solid $color-modal-input-active;
+  border: 2px solid $second-color-main;
 }

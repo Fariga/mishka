@@ -7,7 +7,6 @@
   background-image: url(../../img/zigzag-line-desktop-my.svg);
   width: 100%;
   display: block;
-  background-repeat: no-repeat;
   height: 6px;
 }
 
@@ -16,7 +15,7 @@
 }
 
 .proposition__label {
-  color: $color-proposition-label;
+  color: $second-color-main;
   font-size: 17px;
   line-height: 20px;
   font-weight: 700;
@@ -31,6 +30,7 @@
 
 .proposition__tbl {
   margin-bottom: 28px;
+  width: 100%;
 }
 
 .proposition__row {
@@ -39,7 +39,7 @@
 
 .proposition__characteristic,
 .proposition__value {
-  border-bottom: 2px solid $color-border;
+  border-bottom: 2px solid $color-white;
   line-height: 20px;
 }
 .proposition__characteristic {
@@ -52,6 +52,7 @@
 
 .proposition__picture {
   margin-bottom: 26px;
+  text-align: center;
 }
 
 .proposition__price {
@@ -65,4 +66,8 @@
 
 .proposition__btn {
   padding: 14px 83px;
+}
+
+.proposition__btn-wrapper {
+  text-align: center;
 }

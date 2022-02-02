@@ -1,5 +1,5 @@
 .page-footer {
-  background-color: $color-page-footer;
+  background-color: $color-light-grey;
 }
 
 .page-footer__wrapper {
@@ -9,8 +9,9 @@
 .social__list {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid $color-border-footer;
+  border-bottom: 1px solid $color-grey;
   padding: 25px 62px 27px 57px;
+  justify-content: center;
 }
 
 .social__link,
@@ -27,6 +28,7 @@
   padding: 22px 35px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .copiright__text {
@@ -39,10 +41,10 @@
 
 .social__link:hover svg,
 .copiright__link:hover svg {
-  fill: $color-icon-hover;
+  fill: $second-color-main;
 }
 
 .social__link:active svg,
 .copiright__link:active svg {
-  fill: $color-icon-active;
+  fill: $color-turquoise-6;
 }

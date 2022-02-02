@@ -16,12 +16,12 @@
 }
 
 .category__item--furniture {
-  background-color: $color-category-furniture;
+  background-color: $second-color-main;
   padding: 23px 35px 18px 30px;
 }
 
 .category__item--toy {
-  background-color: $color-category-toy;
+  background-color: $color-turquoise-1;
   padding: 23px 26px 20px 30px;
 }
 
@@ -36,6 +36,7 @@
 .category__link {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .category__icon {
@@ -49,13 +50,17 @@
 
 .category__item--furniture:hover,
 .category__item--furniture:active {
-  background-color: $color-category-furniture-hover-active;
+  background-color: $color-turquoise;
 }
 
 .category__item--toy:hover {
-  background-color: $color-category-toy-hover-active;
+  background-color: $color-turquoise-2;
 }
 
 .category__link:hover {
   transform: translateY(-5px);
+}
+
+.category__link:active {
+  opacity: 0.3;
 }

@@ -1,5 +1,23 @@
+.main-nav__btn-menu,
+.main-nav__btn-close {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.main-nav__btn-menu {
+  display: none;
+}
+
+.main-nav__btn-close {
+  display: block;
+}
+
 .site-list__item {
-  border-top: 2px solid $color-border;
+  border-top: 2px solid $color-white;
 }
 
 .site-list__link {
@@ -18,7 +36,7 @@
 
 .site-list__item:nth-child(3) .site-list__text,
 .site-list__item:nth-child(4) .site-list__text {
-  margin-left: 22px;
+  margin-left: 25px;
 }
 
 .site-list__link:hover {
@@ -35,12 +53,12 @@
 }
 
 .site-list__link:hover .site-list__icon {
-  fill: $color-icon-hover;
+  fill: $second-color-main;
   opacity: 1;
 }
 
 .site-list__link:active .site-list__icon {
-  fill: $color-icon-down;
+  fill: $color-turquoise-4;
 }
 
 .site-list__icon {
