@@ -1,13 +1,16 @@
 .proposition__wrapper {
-  padding: 35px 30px 40px 30px;
+  padding-top: 35px;
+  padding-bottom: 40px;
 }
 
-.proposition::after {
-  content: " ";
-  background-image: url(../../img/zigzag-line-desktop-my.svg);
-  width: 100%;
-  display: block;
-  height: 6px;
+.proposition {
+  &::after {
+    content: " ";
+    background-image: url(/img/zigzag-line-desktop-my.svg);
+    width: 100%;
+    display: block;
+    height: 6px;
+  }
 }
 
 .proposition__title {
@@ -19,7 +22,6 @@
   font-size: 17px;
   line-height: 20px;
   font-weight: 700;
-  text-align: left;
   margin-bottom: 23px;
 }
 
@@ -31,16 +33,14 @@
 .proposition__tbl {
   margin-bottom: 28px;
   width: 100%;
-}
-
-.proposition__row {
-  height: 40px;
+  border-collapse: collapse;
 }
 
 .proposition__characteristic,
 .proposition__value {
   border-bottom: 2px solid $color-white;
   line-height: 20px;
+  padding: 9px;
 }
 .proposition__characteristic {
   min-width: 100px;
@@ -65,7 +65,7 @@
 }
 
 .proposition__btn {
-  padding: 14px 83px;
+  padding: 14px 30px;
 }
 
 .proposition__btn-wrapper {

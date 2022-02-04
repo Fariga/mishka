@@ -3,7 +3,7 @@
 }
 
 .reviews__wrapper {
-  padding: 0 30px 40px 30px;
+  padding-bottom: 40px;
 }
 
 .reviews::after {
@@ -19,7 +19,6 @@
 }
 
 .reviews__text {
-  text-align: left;
   margin-bottom: 33px;
 }
 
@@ -49,24 +48,31 @@
   width: 50%;
 }
 
-.reviews__slider-toggle--left {
-  border-right: 1px solid $color-white;
-}
+.reviews__slider-toggle {
+  &--left {
+    border-right: 1px solid $color-white;
+  }
 
-.reviews__slider-toggle--right {
+  &--right {
   border-left: 1px solid $color-white;
+  }
 }
 
 .reviews__btn {
-  padding: 14px 81px;
+  padding: 14px 30px;
 }
 
-.slider__toggle:hover svg {
-  fill: $main-color-text-hover;
-}
-
-.slider__toggle:active svg {
-  fill: $main-color-text-down;
+.reviews__slider-toggle {
+  &:hover {
+    svg {
+      fill: $main-color-text-hover;
+    }
+  }
+  &:active {
+    svg {
+      fill: $main-color-text-down;
+    }
+  }
 }
 
 .reviews__btn-wrapper {

@@ -1,0 +1,44 @@
+
+.site-list__item {
+  border-top: 2px solid $color-white;
+}
+
+.site-list__link {
+  color: $main-color-text;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  padding: 30px 30px 30px 75px;
+  position: relative;
+
+  &:hover {
+    color: $main-color-text-hover;
+
+    .site-list__icon {
+      fill: $second-color-main;
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    color: $main-color-text-down;
+
+    .site-list__icon {
+      fill: $color-turquoise-4;
+    }
+  }
+}
+
+.site-list__icon {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+}
+
+.site-list__quantity {
+  margin-left: 5px;
+}

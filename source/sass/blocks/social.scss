@@ -1,0 +1,33 @@
+.social {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $color-grey;
+  padding: 25px 62px 27px 57px;
+  justify-content: center;
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+
+  &:hover {
+
+    svg {
+      fill: $second-color-main;
+    }
+  }
+
+  &:active {
+
+    svg {
+      fill: $color-turquoise-6;
+    }
+  }
+}
+
+.social__item {
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+

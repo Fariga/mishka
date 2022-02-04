@@ -1,6 +1,5 @@
 .contacts__wrapper {
   margin-bottom: 35px;
-  padding: 0 30px;
 }
 
 .contacts__title {
@@ -20,45 +19,44 @@
 .contacts__description {
   color: $second-color-text;
   position: relative;
-}
 
-.contacts__description:hover {
-  color: $color-turquoise-5;
-}
+  &:hover {
+    color: $color-turquoise-5;
 
-.contacts__description:active {
-  color: $color-turquoise-7;
-}
+    &::after {
+      background-color: $color-turquoise-5;
+    }
+  }
 
-.contacts__description::after {
-  content: " ";
-  position: absolute;
-  height: 1px;
-  width: 180px;
-  top: 28px;
-  right: 0px;
-  background-color: $color-turquoise-3;
-}
+  &:active {
+    color: $color-turquoise-7;
 
-.contacts__description:hover::after {
-  background-color: $color-turquoise-5;
-}
+    &::after {
+      background-color: $color-turquoise-7;
+    }
+  }
 
-.contacts__description:active::after {
-  background-color: $color-turquoise-7;
+  &::after {
+    content: " ";
+    position: absolute;
+    height: 1px;
+    left: 0;
+    top: 28px;
+    right: 0;
+    background-color: $color-turquoise-3;
+  }
 }
 
 .contacts__map {
   margin-bottom: 39px;
   text-align: center;
-  width: 100%;
 }
 
 .contacts__btn {
-  padding: 16px 53px;
+  padding: 14px 30px;
 }
 
 .contacts-btn__wrapper {
-  margin: 0 30px 39px 30px;
+  margin-bottom: 39px;
   text-align: center;
 }

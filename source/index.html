@@ -9,7 +9,7 @@
 <body>
   <header class="page-header">
     <div class="page-header__wrapper">
-      <a class="page-header-link">
+      <a class="page-header__link">
         <span class="page-header__logo">
           <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="85.589px" height="35.034px" viewBox="32.458 20.216 85.589 35.034" enable-background="new 32.458 20.216 85.589 35.034" xml:space="preserve">
             <g>
@@ -27,12 +27,12 @@
       </a>
     </div>
     <nav class="main-nav main-nav--open">
-      <button class="main-nav__btn-menu" type="button">
+      <button class="main-nav__btn main-nav__btn--open" type="button">
         <div class="main-nav__icon-menu">
           <img src="img/icon-menu-open.svg" alt="кнопка открыть" width="20" height="14">
         </div>
       </button>
-      <button class="main-nav__btn-close" type="button">
+      <button class="main-nav__btn main-nav__btn--close" type="button">
         <div class="main-nav__icon-close">
           <img src="img/icon-menu-close.svg" alt="кнопка закрыть" width="21" height="20">
         </div>
@@ -74,22 +74,26 @@
       <h2 class="visually-hidden">Продукты</h2>
       <p class="category__slogan">Милые штуки ручной<br> работы для дома</p>
       <ul class="category__list">
-        <li class="category__item--furniture">
-          <a class="category__link" href="#">
+        <li class="category__item">
+          <a class="category__link category__link--furniture" href="#">
             <p class="category__description">Предметы интерьера</p>
-            <img class="category__icon" src="img/icon-interior.svg" alt="Предмет интерьера" width="40" height="62">
+            <div class="category__icon">
+              <img src="img/icon-interior.svg" alt="Предмет интерьера" width="40" height="62">
+            </div>
           </a>
         </li>
-        <li class="category__item--toy">
-          <a class="category__link" href="#">
+        <li class="category__item">
+          <a class="category__link category__link--toy" href="#">
             <p class="category__description">Детские игрушки</p>
-            <img class="category__icon" src="img/icon-toy.svg" alt="Предмет интерьера" width="60" height="60">
+            <div class="category__icon">
+              <img src="img/icon-toy.svg" alt="Предмет интерьера" width="60" height="60">
+            </div>
           </a>
         </li>
       </ul>
     </section>
     <section class="proposition">
-      <div class="proposition__wrapper">
+      <div class="proposition__wrapper wrapper">
         <h2 class="section-title proposition__title">Вязаные корзинки</h2>
         <p class="proposition__label">Товар недели</p>
         <p class="proposition__description">
@@ -120,7 +124,7 @@
       </div>
     </section>
     <section class="advantages">
-      <div class="advantages__wrapper">
+      <div class="advantages__wrapper wrapper">
       <h2 class="section-title advantages__title">Коротко о нас:</h2>
         <ul class="advantages__list">
           <li class="advantages__item">
@@ -163,7 +167,7 @@
       </div>
     </section>
     <section class="reviews">
-      <div class="reviews__wrapper">
+      <div class="reviews__wrapper wrapper">
         <h2 class="section-title reviews__title">Отзывы</h2>
           <div class="slider">
             <div class="reviews__list slider__list">
@@ -194,7 +198,7 @@
       </div>
     </section>
     <section class="contacts">
-      <div class="contacts__wrapper">
+      <div class="contacts__wrapper wrapper">
         <h2 class="contacts__title">Контакты</h2>
         <address class="cotacts__address">
         <div class="contacts__box">
@@ -203,7 +207,7 @@
         </div>
         <div class="contacts__box">
           <span class="contacts__text">адрес:</span>
-          <p class="contacts__description--street">г. Санкт-Петербург,
+          <p class="contacts contacts__description--street">г. Санкт-Петербург,
              ул. Большая Конюшенная, д. 19/8, офис 101
           </p>
         </div>
@@ -223,8 +227,8 @@
 
   </main>
   <footer class="page-footer">
-    <div class="page-footer__wrapper">
-     <ul class="social__list">
+    <div class="page-footer__wrapper wrapper">
+     <ul class="social">
        <li class="social__item">
          <a class="social__link link__social" href="http://www.instagram.com/htmlacademy">
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21.769px" height="21.334px" viewBox="53.115 53.19 21.769 21.334" enable-background="new 53.115 53.19 21.769 21.334" xml:space="preserve">
@@ -268,28 +272,28 @@
      </div>
     </div>
   </footer>
-  <div class="modal modal-container-close">
+  <div class="modal">
       <section class="modal__content">
         <h2 class="modal__title">Добавить  в корзину</h2>
         <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
           <p class="modal__text" for="size">Выберите размер:</p>
           <ul class="modal__list">
             <li class="modal__item">
-              <label class="modal__size">
+              <label class="control-mark">
                 <input class="visually-hidden" type="radio" name="size" value="s" checked>
-                <div class="control-mark">S</div>
+                <span class="control-mark__text">S</span>
               </label>
             </li>
             <li class="modal__item">
-              <label class="modal__size">
+              <label class="control-mark">
                 <input class="visually-hidden" type="radio" name="size" value="m">
-                <div class="control-mark">M</div>
+                <span class="control-mark__text">M</span>
               </label>
             </li>
             <li class="modal__item">
-              <label class="modal__size">
+              <label class="control-mark">
                 <input class="visually-hidden" type="radio" name="size" value="l">
-                <div class="control-mark">L</div>
+                <span class="control-mark__text">L</span>
               </label>
             </li>
           </ul>

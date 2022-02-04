@@ -25,15 +25,17 @@
           </svg>
         </span>
       </a>
-      <button class="page-header__btn-menu" type="button">
-        <div class="page-header__icon-menu">
+    </div>
+    <nav class="main-nav main-nav--open">
+      <button class="main-nav__btn-menu" type="button">
+        <div class="main-nav__icon-menu">
           <img src="img/icon-menu-open.svg" alt="кнопка открыть" width="20" height="14">
         </div>
       </button>
-    </div>
-    <nav class="main-nav">
-      <button class="main-nav__btn visually-hidden" type="button">
-        Закрыть
+      <button class="main-nav__btn-close" type="button">
+        <div class="main-nav__icon-close">
+          <img src="img/icon-menu-close.svg" alt="кнопка закрыть" width="21" height="20">
+        </div>
       </button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
@@ -73,8 +75,8 @@
     <section class="catalog">
       <ul class="catalog__list">
         <li class="catalog__item">
-          <a href="#">
-            <img class="catalog__image" src="img/photo-hare-mobile@1x.jpg" alt="Фото зайца" width="260" height="195">
+          <a class="catalog__image-link" href="#">
+            <img src="img/photo-hare-mobile@1x.jpg" alt="Фото зайца" width="260" height="195">
           </a>
           <div class="catalog__wrapper">
             <div class="catalog__description">
@@ -92,8 +94,8 @@
           </div>
         </li>
         <li class="catalog__item">
-          <a href="#">
-            <img class="catalog__image" src="img/photo-bowl-mobile@1x.jpg" alt="Корзина для белья" width="260" height="195">
+          <a class="catalog__image-link" href="#">
+            <img src="img/photo-bowl-mobile@1x.jpg" alt="Корзина для белья" width="260" height="195">
           </a>
           <div class="catalog__wrapper">
             <div class="catalog__description">
@@ -112,8 +114,8 @@
           </div>
         </li>
         <li class="catalog__item">
-          <a href="#">
-            <img class="catalog__image" src="img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек" width="260" height="195">
+          <a class="catalog__image-link" href="#">
+            <img src="img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек" width="260" height="195">
           </a>
           <div class="catalog__wrapper">
             <div class="catalog__description">
@@ -133,20 +135,22 @@
       </ul>
     </section>
     <section class="videoplayer">
-      <div class="videoplayer__header">
-        <img class="videoplayer__icon" src="img/icon-video.svg" width="32" height="22" alt="видео">
-        <h3 class="videoplayer__title">Процесс производства</h3>
+      <div class="videoplayer__wrapper">
+        <div class="videoplayer__header">
+          <img class="videoplayer__icon" src="img/icon-video.svg" width="32" height="22" alt="видео">
+          <h3 class="videoplayer__title">Процесс производства</h3>
+        </div>
+        <div class="videoplayer__box">
+          <video src="#" width="260" height="150" poster="img/video-mobile@1x.jpg">
+          </video>
+          <button class="videoplayer__play">
+          </button>
+        </div>
+        <p class="videoplayer__description">
+          По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+        </p>
+        <a class="videoplayer__link button" href="form.html">Сделать заказ</a>
       </div>
-      <div class="videoplayer__box">
-        <video src="#" width="260" height="150" poster="img/video-mobile@1x.jpg">
-        </video>
-        <button class="videoplayer__play">
-        </button>
-      </div>
-      <p class="videoplayer__description">
-        По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
-      </p>
-      <a class="videoplayer__link button" href="form.html">Сделать заказ</a>
     </section>
   </main>
   <footer class="page-footer">
@@ -195,26 +199,35 @@
      </div>
     </div>
   </footer>
-  <div class="modal">
+  <div class="modal modal-container-close">
     <section class="modal__content">
       <h2 class="modal__title">Добавить  в корзину</h2>
       <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
-        <legend class="modal__text" for="size">Выберите размер:</legend>
-        <div class="modal__wrapper">
-          <label class="visually-hidden" for="size-s">размер S</label>
-          <input class="modal__size" id="size-s" type="radio" name="size" value="s" checked>
-        </div>
-        <div class="modal__wrapper">
-          <label class="visually-hidden" for="size-m">размер M</label>
-          <input class="modal__size" id="size-m" type="radio" name="size" value="m">
-        </div>
-        <div class="modal__wrapper">
-          <label class="visually-hidden" for="size-l">размер L</label>
-          <input class="modal__size" id="size-l" type="radio" name="size" value="l">
-        </div>
+        <p class="modal__text" for="size">Выберите размер:</p>
+        <ul class="modal__list">
+          <li class="modal__item">
+            <label class="modal__size">
+              <input class="visually-hidden" type="radio" name="size" value="s" checked>
+              <div class="control-mark">S</div>
+            </label>
+          </li>
+          <li class="modal__item">
+            <label class="modal__size">
+              <input class="visually-hidden" type="radio" name="size" value="m">
+              <div class="control-mark">M</div>
+            </label>
+          </li>
+          <li class="modal__item">
+            <label class="modal__size">
+              <input class="visually-hidden" type="radio" name="size" value="l">
+              <div class="control-mark">L</div>
+            </label>
+          </li>
+        </ul>
+        <button class="modal__button" type="button">Добавить</button>
       </form>
-      <button class="modal__button" type="button">Добавить</button>
+
     </section>
-  </div>
+</div>
 </body>
 </html>
