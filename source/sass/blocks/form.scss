@@ -1,0 +1,229 @@
+.form__wrapper {
+  padding-bottom: 55px;
+  padding-top: 30px;
+}
+
+.form__description {
+  font-size: 13px;
+  line-height: 24px;
+  margin-bottom: 26px;
+}
+
+.form__filter,
+.form__id,
+.form__address,
+.form__add {
+  border: 0;
+}
+
+.form__id {
+  margin-bottom: 10px;
+}
+
+.form__address {
+  margin-bottom: 31px;
+}
+
+.form__add {
+  margin-bottom: 17px;
+}
+
+.form__footnote {
+  margin-bottom: 31px;
+}
+
+.form__title {
+  font-size: 17px;
+  line-height: 1;
+  color: $second-color-main;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: " ";
+    margin-left: 20px;
+    height: 1px;
+    background-color: $color-turquoise-3;
+    flex-grow: 1;
+  }
+}
+
+.form__title--add {
+  margin-bottom: 23px;
+}
+
+.form__text,
+.form__name {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 18px;
+  color: $main-color-text;
+}
+
+.form__name {
+  margin-right: 25px;
+}
+
+.form__text {
+  margin-left: 24px;
+}
+
+.form__list {
+  padding-top: 27px;
+  padding-bottom: 10px;
+}
+
+.form__item {
+  padding-bottom: 24px;
+  display: flex;
+  min-width: 260px;
+}
+
+.form__id {
+  .form__title {
+    margin-bottom: 15px;
+  }
+}
+
+.form__input {
+  font-size: 17px;
+  line-height: 18px;
+  min-width: 260px;
+  width: 100%;
+  padding: 18px 40px 18px 18px;
+
+
+  &:active {
+    color: $second-color-text;
+  }
+}
+
+.form__input--add {
+  margin-left: 0;
+  padding: 16px;
+  border: 2px solid $second-color-text;
+
+  &:hover,
+  &:active {
+    border-color: $color-turquoise-3;
+  }
+}
+
+.form__input-wrapper {
+  display: flex;
+  flex-direction: column;
+
+
+
+  &::after {
+    content: " ";
+    height: 2px;
+    background-color: $main-color-text;
+    flex-grow: 1;
+  }
+
+  &:hover,
+  &:active {
+    &::after {
+      background-color: $color-turquoise-3;
+    }
+  }
+
+}
+
+.form__name-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.form__button {
+  padding: 20px 47px;
+  display: block;
+  margin: 0 auto;
+}
+
+.form__list-colors {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.form__list-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form__control {
+  display: flex;
+  align-items: center;
+}
+
+.form__mark {
+  width: 40px;
+  height: 40px;
+  border: 2px solid $second-color-text;
+  position: relative;
+
+  &:hover {
+    border-color: $color-turquoise-3;
+  }
+
+  &:active {
+    border-color: $main-color-text-down;
+  }
+}
+
+.form__mark--circle {
+  border-radius: 50%;
+  background: transparent;
+  background-clip: content-box;
+  padding: 10px;
+}
+
+.form__control-input:checked ~ .form__mark--circle {
+  background-color: $color-turquoise-5;
+  }
+
+  .form__mark::before {
+    content: " ";
+    position: absolute;
+    background-image: url(/img/icon-tick-mobile.svg);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    width: 22px;
+    height: 16px;
+  }
+
+.form__control-check:checked ~ .form__mark::before {
+  display: block;
+}
+
+.form__icon-phone {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  opacity: 0.2;
+
+  &:hover,
+  &:active {
+    fill: $color-turquoise-3;
+    opacity: 1;
+  }
+}
+
+.form__input-box {
+  display: flex;
+  align-items: center;
+}
+
+.form__phone-box {
+  display: flex;
+  position: relative;
+}

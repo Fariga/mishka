@@ -20,10 +20,19 @@
 @import "blocks/social.scss";
 @import "blocks/copiright.scss";
 @import "blocks/control-mark.scss";
+@import "blocks/videoplayer.scss";
+@import "blocks/form.scss";
+@import "blocks/border.scss";
 
 html {
   box-sizing: border-box;
   height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
@@ -42,12 +51,6 @@ body {
 
 a {
   text-decoration: none;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
 }
 
 li
@@ -76,4 +79,10 @@ button {
 
 address {
   font-style: normal;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
 }

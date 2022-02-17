@@ -23,4 +23,12 @@
   line-height: 18px;
   margin-right: 30px;
   color: $main-color-text;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    color: $main-color-text-down;
+  }
 }
