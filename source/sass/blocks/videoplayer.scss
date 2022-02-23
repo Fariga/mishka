@@ -13,11 +13,12 @@
   position: relative;
 }
 
-.videoplayer__icon {
+.videoplayer__icon-box {
   position: absolute;
   top: 50%;
   left: 35px;
   transform: translateY(-50%);
+  display: flex;
 }
 
 .videoplayer__picture {

@@ -64,6 +64,8 @@
 
 .form__name {
   margin-right: 25px;
+  display: block;
+  max-width: 50%;
 }
 
 .form__text {
@@ -71,8 +73,7 @@
 }
 
 .form__list {
-  padding-top: 27px;
-  padding-bottom: 10px;
+  margin: 27px 0 10px 0;
 }
 
 .form__item {
@@ -92,7 +93,7 @@
   line-height: 18px;
   min-width: 260px;
   width: 100%;
-  padding: 18px 40px 18px 18px;
+  padding: 18px 40px 18px 0;
 
 
   &:active {
@@ -112,31 +113,15 @@
 }
 
 .form__input-wrapper {
-  display: flex;
-  flex-direction: column;
-
-
-
-  &::after {
-    content: " ";
-    height: 2px;
-    background-color: $main-color-text;
-    flex-grow: 1;
-  }
-
   &:hover,
   &:active {
     &::after {
       background-color: $color-turquoise-3;
     }
   }
-
 }
 
 .form__name-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   margin-bottom: 25px;
 }
 
@@ -149,11 +134,6 @@
 .form__list-colors {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-}
-
-.form__list-box {
-  display: flex;
   flex-wrap: wrap;
 }
 
@@ -205,11 +185,6 @@
 }
 
 .form__icon-phone {
-  position: absolute;
-  top: 50%;
-  right: 8px;
-  transform: translateY(-50%);
-  opacity: 0.2;
 
   &:hover,
   &:active {
@@ -221,9 +196,14 @@
 .form__input-box {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .form__phone-box {
   display: flex;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  opacity: 0.2;
 }

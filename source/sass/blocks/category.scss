@@ -15,21 +15,18 @@
   min-height: 255px;
 }
 
+.category__item {
+  &:hover {
+    transform: scaleY(1.05);
+  }
+}
+
 .category__link {
   display: flex;
   align-items: center;
   padding: 23px 100px 23px 30px;
   position: relative;
   min-height: 102px;
-
-  &:hover {
-    transform: scaleY(1.042);
-
-    .category__icon,
-    .category__description {
-      transform: translateY(-5px);
-    }
-  }
 
   &:active {
     opacity: 0.3;

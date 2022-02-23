@@ -6,7 +6,7 @@
 .catalog__list {
   display: grid;
   gap: 30px;
-  grid-template-columns: repeat(auto-fit, 260px);
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 }
 
 .catalog__item {
@@ -15,8 +15,16 @@
   flex-direction: column;
 }
 
-.catalog__foto {
+.catalog__photo {
   display: flex;
+  height: 195px;
+
+   img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
 }
 
 .catalog__card-wrapper {
@@ -56,13 +64,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 22px;
 }
 
 .catalog__price {
   line-height: 24px;
   font-weight: 700;
   color: $main-color-text;
-  padding-top: 22px;
+
 
   &:hover {
     color: $main-color-text-hover;
@@ -75,8 +84,8 @@
 
 .catalog__link {
   display: flex;
-  padding-left: 22px;
-  padding-top: 22px;
+  margin-left: 22px;
+
 
   &:hover {
     svg {

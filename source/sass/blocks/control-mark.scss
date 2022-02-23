@@ -2,9 +2,6 @@
 .control-mark__text {
   border: 2px solid $color-white;
   display: block;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 17px;
   font-weight: 700;
   line-height: 16px;
@@ -18,4 +15,8 @@
 
 .modal__size input:checked + .control-mark {
   border: 2px solid $second-color-main;
+}
+
+.control-mark {
+  display: block;
 }
