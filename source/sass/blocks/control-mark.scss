@@ -1,0 +1,22 @@
+
+.control-mark__text {
+  border: 2px solid $color-white;
+  display: block;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 16px;
+  cursor: pointer;
+  padding: 15px;
+
+  &:hover {
+    border-color: $color-grey-1;
+  }
+}
+
+.modal__size input:checked + .control-mark {
+  border: 2px solid $second-color-main;
+}
+
+.control-mark {
+  display: block;
+}

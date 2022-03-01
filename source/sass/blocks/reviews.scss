@@ -1,0 +1,82 @@
+.reviews {
+  margin-bottom: 38px;
+}
+
+.reviews__wrapper {
+  padding-bottom: 40px;
+}
+
+.reviews {
+  &::after {
+  content: " ";
+  background-image: url(../../img/zigzag-line-desktop-my.svg);
+  width: 100%;
+  display: block;
+  height: 6px;
+  }
+}
+
+.reviews__title {
+  margin-bottom: 27px;
+}
+
+.reviews__text {
+  margin-bottom: 33px;
+}
+
+.reviews__author-name {
+  font-weight: 700;
+  color: $main-color-text;
+  font-size: 17px;
+}
+
+.reviews__author-mail {
+  color: $second-color-text;
+}
+
+.reviews__list {
+  margin-bottom: 35px;
+}
+
+.reviews__toggles {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 38px;
+}
+
+.reviews__slider-toggle {
+  border: 2px solid $color-white;
+  width: 50%;
+}
+
+.reviews__slider-toggle {
+  &--left {
+    border-right: 1px solid $color-white;
+  }
+
+  &--right {
+  border-left: 1px solid $color-white;
+  }
+}
+
+.reviews__btn {
+  padding: 14px 30px;
+}
+
+.reviews__slider-toggle {
+  &:hover {
+    svg {
+      fill: $main-color-text-hover;
+    }
+  }
+  &:active {
+    svg {
+      fill: $main-color-text-down;
+    }
+  }
+}
+
+.reviews__btn-wrapper {
+  text-align: center;
+}

@@ -1,0 +1,25 @@
+.main-nav__btn {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+  &--close {  /* видишь этот класс*/
+    display: none;  /* спрячь кнопку меню*/
+
+    .main-nav--open & {  /*добавь класс*/
+      display: block;  /*покажет меню*/
+    }
+  }
+
+  &--open {     /* видишь этот класс*/
+    display: block; /*покажи кнопку меню*/
+
+      .main-nav--open & {  /*добавь класс*/
+        display: none;  /*спрячь меню*/
+      }
+  }
+}
+

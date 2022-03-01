@@ -1,0 +1,26 @@
+.button {
+  color: $second-color-text;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid currentColor;
+  display: inline-block;
+  min-width: 260px;
+
+  &:hover,
+  &:active {
+    background-color: $second-color-text;
+    border: 2px solid $second-color-text;
+  }
+
+  &:hover {
+    color: $color-main;
+  }
+
+
+  &:active {
+    color: $color-dark-grey;
+  }
+}

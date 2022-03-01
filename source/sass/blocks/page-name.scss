@@ -1,0 +1,14 @@
+.page-name {
+  background-color: $color-light-grey;
+  min-height: 177px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-name__title {
+  font-size: 27px;
+  font-weight: 700;
+  color: $main-color-text;
+}

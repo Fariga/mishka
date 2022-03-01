@@ -1,0 +1,73 @@
+.proposition__wrapper {
+  padding-top: 35px;
+  padding-bottom: 40px;
+}
+
+.proposition {
+  &::after {
+    content: " ";
+    background-image: url(/img/zigzag-line-desktop-my.svg);
+    width: 100%;
+    display: block;
+    height: 6px;
+  }
+}
+
+.proposition__title {
+  margin-bottom: 4px;
+}
+
+.proposition__label {
+  color: $second-color-main;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+  margin-bottom: 23px;
+}
+
+.proposition__description {
+  line-height: 24px;
+  margin-bottom: 26px;
+}
+
+.proposition__tbl {
+  margin-bottom: 28px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.proposition__characteristic,
+.proposition__value {
+  border-bottom: 2px solid $color-white;
+  line-height: 20px;
+  padding: 9px;
+}
+.proposition__characteristic {
+  min-width: 100px;
+}
+
+.proposition__value {
+  min-width: 160px;
+}
+
+.proposition__picture {
+  margin-bottom: 26px;
+  text-align: center;
+}
+
+.proposition__price {
+  color: $second-color-text;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.proposition__btn {
+  padding: 14px 30px;
+}
+
+.proposition__btn-wrapper {
+  text-align: center;
+}

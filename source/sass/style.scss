@@ -1,1 +1,88 @@
+@import "normalize.scss";
+@import "variables.scss";
+@import "fonts.scss";
+@import "blocks/page-header.scss";
+@import "visually-hidden.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/category.scss";
+@import "blocks/proposition.scss";
+@import "blocks/section-title.scss";
+@import "blocks/button.scss";
+@import "blocks/advantages.scss";
+@import "blocks/reviews.scss";
+@import "blocks/contacts.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/modal.scss";
+@import "blocks/page-name.scss";
+@import "blocks/catalog.scss";
+@import "blocks/site-list.scss";
+@import "blocks/wrapper.scss";
+@import "blocks/social.scss";
+@import "blocks/copiright.scss";
+@import "blocks/control-mark.scss";
+@import "blocks/videoplayer.scss";
+@import "blocks/form.scss";
+@import "blocks/border.scss";
 
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: $main-font;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+  background-color: $color-main;
+  color: $second-color-text;
+}
+
+a {
+  text-decoration: none;
+}
+
+li
+ {
+   list-style-type: none;
+ }
+
+ ul {
+   margin: 0;
+   padding: 0;
+ }
+
+ h1,
+ h2,
+ h3,
+ p,
+ blockquote {
+   margin: 0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+address {
+  font-style: normal;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}

@@ -1,0 +1,14 @@
+.page-header__wrapper {
+  padding: 22px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-header {
+  border-bottom: 2px solid $color-white;
+  position: relative;
+}
+.page-header__link {
+  display: flex;
+}
