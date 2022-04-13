@@ -1,4 +1,10 @@
 .wrapper {
   padding-right: 30px;
   padding-left: 30px;
+
+  @include media(tablet) {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
 }

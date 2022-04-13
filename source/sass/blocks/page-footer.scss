@@ -5,13 +5,47 @@
 .page-footer__wrapper {
   padding-top: 25px;
   padding-bottom: 30px;
+
+  @include media(tablet) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+  }
 }
 
+.page-footer__logo {
+  & svg {
+    vertical-align: middle;
+  }
+
+  &:hover {
+    fill: $color-turquoise-2;
+  }
+
+  &:active {
+    fill: $color-turquoise-6;
+  }
+
+}
+
+.page-footer__logo-wrapper {
+  display: none;
+
+  @include media(tablet) {
+    display: block;
+    width: 30%;
+  }
+}
 
 .page-footer__copyright {
   padding: 22px 35px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
+  @include media(tablet) {
+    padding: 0;
+    width: 30%;
+  }
+}

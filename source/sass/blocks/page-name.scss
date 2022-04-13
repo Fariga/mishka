@@ -5,10 +5,54 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+
+
+  @include media(tablet) {
+    min-height: 214px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    min-height: 224px;
+    margin-bottom: 67px;
+  }
+
+  @include media(desktop) {
+    min-height: 238px;
+    min-height: 250px;
+    margin-bottom: 111px;
+  }
+
+  &::after {
+    @include media(tablet) {
+      content: "";
+      position: absolute;
+      top: calc(100% - 10px);
+      height: 24px;
+      background-image: url("/img/bg-zigzag-fill.svg");
+      background-size: auto 24px;
+      width: 100%;
+    }
+
+    @include media(desktop) {
+      height: 34px;
+      top: calc(100% - 14px);
+      background-size: auto 34px;
+    }
+  }
 }
 
 .page-name__title {
   font-size: 27px;
   font-weight: 700;
   color: $main-color-text;
+
+  @include media(tablet) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @include media(desktop) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }

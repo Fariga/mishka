@@ -5,21 +5,58 @@
   position: absolute;
   top: 30px;
   right: 30px;
+  display: none;
 
-  &--close {  /* видишь этот класс*/
-    display: none;  /* спрячь кнопку меню*/
-
-    .main-nav--open & {  /*добавь класс*/
-      display: block;  /*покажет меню*/
+  @media (max-width: 767px) {
+    &--close {
+      .main-nav--open & {  /*добавь класс*/
+        display: block;  /*покажет меню*/
+      }
     }
-  }
 
-  &--open {     /* видишь этот класс*/
-    display: block; /*покажи кнопку меню*/
+    &--open {
+      display: block;
 
       .main-nav--open & {  /*добавь класс*/
         display: none;  /*спрячь меню*/
       }
+    }
   }
 }
 
+.main-nav {
+  @media (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px)) {
+    height: 100%;
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+  @include media(desktop) {
+    position: relative;
+    height: 100%;
+    display: flex;
+  }
+}
+
+.main-nav__text {
+  display: none;
+
+  @include media(tablet) {
+    display: block;
+    order: 1;
+    margin-left: auto;
+    margin-top: 25px;
+  }
+
+  @include media(desktop) {
+    position: absolute;
+    right: 0;
+    top: 100%;
+  }
+}
+
+.main-nav__list {
+  @include media(tablet) {
+    display: flex;
+  }
+}

@@ -1,9 +1,56 @@
 .reviews {
   margin-bottom: 38px;
+
+  @include media(tablet) {
+    padding-bottom: 67px;
+    margin-bottom: 45px;
+  }
+
+  @include media(desktop) {
+    margin-bottom: 70px;
+  }
 }
 
 .reviews__wrapper {
-  padding-bottom: 40px;
+  padding-bottom: 85px;
+
+  &::after {
+  @include media(tablet) {
+    content: "";
+    position: absolute;
+    background-image: url("/img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 350px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    }
+
+    @include media(desktop) {
+      left: 50px;
+    }
+  }
+
+  @include media(tablet) {
+    position: relative;
+    padding-top: 75px;
+    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    grid-row-gap: 50px;
+    grid-template-areas: "title btn"
+                          "reviews reviews";
+
+  }
+
+  @include media(desktop) {
+    padding-bottom: 100px;
+    padding-top: 80px;
+    padding-left: 225px;
+  }
 }
 
 .reviews {
@@ -18,10 +65,23 @@
 
 .reviews__title {
   margin-bottom: 27px;
+
+  @include media(tablet) {
+    margin-bottom: 0;
+    grid-area: title;
+  }
 }
 
 .reviews__text {
   margin-bottom: 33px;
+
+  @include media(tablet) {
+    margin-bottom: 60px;
+  }
+
+  @include media(desktop) {
+    margin-bottom: 40px;
+  }
 }
 
 .reviews__author-name {
@@ -36,6 +96,11 @@
 
 .reviews__list {
   margin-bottom: 35px;
+
+  @include media(tablet) {
+    grid-area: reviews;
+    margin-bottom: 0;
+  }
 }
 
 .reviews__toggles {
@@ -43,20 +108,43 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 38px;
+
+  @include media(tablet) {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    margin-bottom: 0;
+  }
 }
 
 .reviews__slider-toggle {
   border: 2px solid $color-white;
   width: 50%;
+
+  @include media(tablet) {
+    border: none;
+  }
 }
 
 .reviews__slider-toggle {
   &--left {
     border-right: 1px solid $color-white;
+
+    @include media(tablet) {
+      padding-right: 17px;
+      padding-left: 17px;
+      border-right: none;
+    }
   }
 
   &--right {
   border-left: 1px solid $color-white;
+
+    @include media(tablet) {
+      padding-left: 17px;
+      padding-right: 17px;
+      border-left: none;
+    }
   }
 }
 
@@ -79,4 +167,15 @@
 
 .reviews__btn-wrapper {
   text-align: center;
+
+  @include media(tablet) {
+    grid-area: btn;
+    margin-left: auto;
+  }
+}
+
+.reviews__author-wrapper {
+  @include media(tablet) {
+    padding-right: 200px;
+  }
 }

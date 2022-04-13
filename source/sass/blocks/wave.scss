@@ -1,0 +1,28 @@
+.wave {
+  position: relative;
+
+  &::after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/img/bg-zigzag-line.svg");
+    height: 6px;
+    background-size: auto 6px;
+    background-repeat: repeat-x;
+    background-position: -5px 0;
+
+    @media (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px)) {
+    background-size: auto 17px;
+    background-position: -20px 0;
+    height: 17px;
+    }
+
+    @include media(desktop) {
+      background-size: auto;
+      height: 23px;
+      background-position: -30px 0;
+    }
+  }
+}

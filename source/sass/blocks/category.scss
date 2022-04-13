@@ -3,6 +3,19 @@
   background-color: $color-main;
   background-repeat: no-repeat;
   background-position: top center;
+
+  @include media(tablet) {
+    &::after {
+      content: "";
+      background-image: url(/img/bg-zigzag-fill.svg);
+      position: absolute;
+      height: 24px;
+      width: 100%;
+      top: calc(100% - 14px);
+    }
+
+    background-image: url(/img/hero-desktop@1x.jpg);
+  }
 }
 
 .category__slogan {
@@ -13,11 +26,38 @@
   text-align: center;
   padding: 75px 30px;
   min-height: 255px;
+
+  @include media(tablet) {
+    padding: 160px 50px;
+    min-height: 625px;
+    font-size: 43px;
+    line-height: 50px;
+
+  }
 }
+
+.category__list {
+  &.wrapper {
+    padding: 0;
+
+    @include media(tablet) {
+      padding-right: 50px;
+      padding-left: 50px;
+    }
+  }
+
+  @include media(tablet) {
+    display: flex;
+   }
+ }
 
 .category__item {
   &:hover {
     transform: scaleY(1.05);
+  }
+
+  @include media(tablet) {
+    flex-grow: 1;
   }
 }
 
@@ -27,6 +67,10 @@
   padding: 23px 100px 23px 30px;
   position: relative;
   min-height: 102px;
+
+  @include media(tablet) {
+    min-height: 119px;
+  }
 
   &:active {
     opacity: 0.3;
@@ -55,6 +99,7 @@
   font-size: 19px;
   font-weight: 700;
   line-height: 24px;
+  max-width: 170px;
 }
 
 .category__icon {

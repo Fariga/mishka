@@ -1,6 +1,76 @@
+.site-list {
+  &--product {
+    @media (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px)) {
+      order: 1;
+    }
+
+    @include media(desktop) {
+      max-width: calc(50% - 75px);
+      flex-wrap: wrap;
+    }
+
+    .site-list__item {
+      @include media(desktop) {
+        min-width: 220px;
+      }
+    }
+
+  }
+
+  &--shipping {
+    @media (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px)) {
+      order: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    @include media(desktop) {
+      width: calc(50% + 75px);
+      margin-left: auto;
+    }
+  }
+}
+
 
 .site-list__item {
   border-top: 2px solid $color-white;
+
+  &.site-list__item--logo {
+    border-top: none;
+  }
+
+  &--desktop {
+    display: none;
+
+    @include media(desktop) {
+      display: block;
+    }
+  }
+
+  &--search,
+  &--basket {
+    @include media(tablet) {
+      display: flex;
+    }
+  }
+
+  &--search {
+    @include media(tablet) {
+      width: 80px;
+    }
+  }
+
+  @include media(tablet) {
+    border-top: none;
+    height: 100%;
+    display: flex;
+  }
+
+  &--logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+  }
 }
 
 .site-list__link {
@@ -12,6 +82,17 @@
   align-items: center;
   padding: 30px 30px 30px 75px;
   position: relative;
+
+  @include media(tablet) {
+    padding: 0;
+  }
+
+  &--search {
+    @include media(tablet){
+      border-right: 2px solid $color-white;
+      border-left: 2px solid $color-white;
+    }
+  }
 
   &:hover {
     color: $main-color-text-hover;
@@ -29,6 +110,43 @@
       fill: $color-turquoise-4;
     }
   }
+
+  &--free {
+    color: $second-color-text;
+    line-height: 24px;
+    font-weight: 400;
+    font-size: 15px;
+  }
+
+  &--tablet {
+    @media (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px)) {
+      font-size: 15px;
+      padding: 25px 35px 25px 0;
+    }
+  }
+
+  &--small {
+    @include media(tablet) {
+      font-size: 15px;
+      display: none;
+    }
+
+    @include media(desktop) {
+      display: block;
+    }
+  }
+
+  &.site-list__link--small {
+    @include media(desktop) {
+      display: flex;
+    }
+  }
+}
+
+.site-list__text--search {
+  @include media(tablet) {
+    display: none;
+  }
 }
 
 .site-list__icon-box {
@@ -37,8 +155,22 @@
   top: 50%;
   left: 30px;
   transform: translateY(-50%);
+
+  @include media(tablet) {
+    position: static;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .site-list__quantity {
   margin-left: 5px;
 }
+
+
+

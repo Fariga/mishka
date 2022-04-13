@@ -4,6 +4,12 @@
   border-bottom: 1px solid $color-grey;
   padding: 25px 62px 27px 57px;
   justify-content: center;
+
+  @include media(tablet) {
+    border-bottom: none;
+    padding: 0;
+    width: 40%;
+  }
 }
 
 .social__link {

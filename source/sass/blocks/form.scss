@@ -1,12 +1,28 @@
 .form__wrapper {
-  padding-bottom: 55px;
-  padding-top: 30px;
+  padding: 30px 30px 55px 30px;
+
+  @include media(tablet) {
+    padding: 0 0 62px 0;
+  }
 }
 
 .form__description {
   font-size: 13px;
   line-height: 24px;
   margin-bottom: 26px;
+
+  @include media(tablet) {
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 12px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @include media(desktop) {
+    padding-left: 225px;
+    padding-right: 225px;
+  }
 }
 
 .form__filter,
@@ -16,20 +32,70 @@
   border: 0;
 }
 
+.form__section {
+
+  @include media(tablet) {
+    padding: 50px 50px 26px 50px;
+  }
+
+  @include media(desktop) {
+    padding-left: 112px;
+    padding-right: 145px;
+  }
+}
+
+.form__section--color {
+  @include media(tablet) {
+    background-color: $color-light-grey;
+  }
+}
+
+.form__filter {
+
+  @include media(tablet) {
+    align-items: flex-start;
+    display: flex;
+  }
+}
+
 .form__id {
   margin-bottom: 10px;
+
+  @include media(tablet) {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
 }
 
 .form__address {
   margin-bottom: 31px;
+  @include media(tablet) {
+    display: flex;
+    align-items: flex-start;
+  }
 }
 
 .form__add {
   margin-bottom: 17px;
+
+  @include media(tablet) {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    margin-bottom: 53px;
+  }
 }
 
 .form__footnote {
   margin-bottom: 31px;
+
+  @include media(tablet) {
+    order: 1;
+    margin-left: auto;
+    margin-bottom: 0;
+    align-self: center;
+  }
 }
 
 .form__title {
@@ -47,6 +113,19 @@
     height: 1px;
     background-color: $color-turquoise-3;
     flex-grow: 1;
+  }
+
+  @include media(tablet) {
+
+    &::after {
+      display: none;
+    }
+    padding-top: 18px;
+    min-width: 167px;
+  }
+
+  @include media(desktop) {
+    min-width: 112px;
   }
 }
 
@@ -74,17 +153,24 @@
 
 .form__list {
   margin: 27px 0 10px 0;
+
+  @include media(tablet) {
+    margin: 0;
+  }
 }
 
 .form__item {
   padding-bottom: 24px;
-  display: flex;
   min-width: 260px;
 }
 
 .form__id {
   .form__title {
     margin-bottom: 15px;
+
+    @include media(tablet) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -95,9 +181,19 @@
   width: 100%;
   padding: 18px 40px 18px 0;
 
+  @include media(tablet) {
+    padding: 18px 55px 18px 18px;
+  }
+
 
   &:active {
     color: $second-color-text;
+  }
+}
+
+.form__input--color {
+  @include media(tablet) {
+    background-color: $color-light-grey;
   }
 }
 
@@ -110,6 +206,10 @@
   &:active {
     border-color: $color-turquoise-3;
   }
+
+  @include media(tablet) {
+    min-height: 142px;
+  }
 }
 
 .form__input-wrapper {
@@ -121,20 +221,46 @@
   }
 }
 
+.form__name-box {
+  @include media(tablet) {
+    flex-grow: 1;
+  }
+}
+
 .form__name-wrapper {
   margin-bottom: 25px;
+
+  @include media(tablet) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.form__input-wrapper {
+  @include media(tablet) {
+    flex-grow: 1;
+  }
 }
 
 .form__button {
   padding: 20px 47px;
   display: block;
   margin: 0 auto;
+
+  @include media(tablet) {
+    margin: 0;
+  }
+
+  @include media(desktop) {
+    margin-left: 112px;
+  }
 }
 
 .form__list-colors {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  @include media(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .form__control {
@@ -168,8 +294,12 @@
   background-color: $color-turquoise-5;
   }
 
-  .form__mark::before {
-    content: " ";
+.form__control-check:checked ~ .form__mark::before {
+  display: block;
+}
+
+.form__mark::before {
+  content: " ";
     position: absolute;
     background-image: url(/img/icon-tick-mobile.svg);
     top: 50%;
@@ -178,10 +308,6 @@
     display: none;
     width: 22px;
     height: 16px;
-  }
-
-.form__control-check:checked ~ .form__mark::before {
-  display: block;
 }
 
 .form__icon-phone {
@@ -199,11 +325,35 @@
   position: relative;
 }
 
-.form__phone-box {
+.form__icon {
   display: flex;
   position: absolute;
   top: 50%;
-  right: 8px;
   transform: translateY(-50%);
   opacity: 0.2;
+
+  &--phone {
+    right: 8px;
+
+    @media (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px)) {
+      right: 26px;
+    }
+  }
+
+  &--email {
+    right: 4px;
+
+    @media (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px)) {
+      right: 22px;
+    }
+  }
+}
+
+.form__section--add {
+  @include media(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-bottom: 0;
+  }
 }

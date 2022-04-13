@@ -4,4 +4,14 @@
   line-height: 30px;
   text-align: left;
   color: $main-color-text;
+
+  @media (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px)) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @include media(desktop) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }

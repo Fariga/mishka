@@ -1,0 +1,11 @@
+$tablet: 768px;
+$desktop: 1150px;
+
+@mixin media($media) {
+  @if $media == tablet {
+    @media (min-width: $tablet) { @content; }
+  }
+  @if $media == desktop {
+    @media (min-width: $desktop) { @content; }
+  }
+}
